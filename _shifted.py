@@ -132,7 +132,6 @@ def check_plurality(word, condition):
 def check_answer(answer):
     
     # Clean answer if it contains commas
-    print(str(table))
     cleaned_answer = answer.replace(",", " ")
 
     # Remove extra spaces
