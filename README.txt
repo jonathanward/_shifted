@@ -34,6 +34,12 @@ The clues given at the beginning of each game tell the user information about th
 
 The player will type the order of dishes starting in place 1. If they guess correctly, they win the game! If the guess is not correct, they will be told how many dishes, if any, are in the correct place.
 
+A guess can look like any of the following:
+
+burrito soup burger pasta
+burrito,soup,burger,pasta
+burrito, soup, burger, pasta
+
 Example response: 0 dishes are in the correct place.
 
 The player will not know if the dish belongs on the table unless it is in the correct place.
@@ -44,4 +50,4 @@ Score will be based on the number of turns it takes the player to correctly gues
 
 ======= HOW IT WORKS IN PYTHON =======
 
-_shifted will rely on the input() function for gameplay. There will be two classes: Players and Guests. The Player class will include the player's name, game status and score information. The Guest class will include attributes of name, dish and place. When each game is initialized, Guest names, menu items, Guest places and clues shuffled. 
+_shifted will rely on the input() function for gameplay. There will be two classes: Players and Guests. The Player class will include the player's name, game status and score information. The Guest class will include attributes of name, dish and place. When each game is initialized, Guest names, menu items, Guest places and clues are shuffled. 
