@@ -136,7 +136,6 @@ def check_answer(answer):
 
     # Remove extra spaces
     answer_with_single_spaces = " ".join(cleaned_answer.split())
-    print(answer_with_single_spaces)
 
     # Split answer into a list of words
     answer_split = answer_with_single_spaces.split(" ")
@@ -168,13 +167,13 @@ def check_answer(answer):
         if (player_one.turns_left == 0):
             game_over(answer_count)
         else:
-            statement = "\n" + str(answer_count) + " food items placed correctly. " + str(player_one.turns_left) + " " + check_plurality("turn", (player_one.turns_left != 1)) + " remaining.\n\n=====\n"
+            statement = "\n" + str(answer_count) + " food " + check_plurality("item", answer_count != 1) + " placed correctly. " + str(player_one.turns_left) + " " + check_plurality("turn", (player_one.turns_left != 1)) + " remaining.\n\n=====\n"
             return statement
 
 # End the game and print the correct answer
 def game_over(answer_count):
     player_one.is_playing = False
-    print("\n\n{} items were placed correctly.\n".format(answer_count))
+    print("\n\n{} {} placed correctly.\n".format(answer_count, check_plurality("item", answer_count != 1)))
     def give_answer():
         statement = ''
         for guest in table:
