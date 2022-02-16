@@ -18,7 +18,7 @@ The player is given an unordered list of the names of four guests seated at a ro
 
 The player can assume each guest chose one unique dish from the menu. Consequently, two of the menu items are not present at the table.
 
-On each turn, the player guesses the order of dishes (starting at place 1).
+On each turn, the player guesses the order of dishes (starting at place 1). The player has eight guesses.
 
 ======= CLUES =======
 

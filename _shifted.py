@@ -142,12 +142,12 @@ def check_answer(answer):
 
     # If the list doesn't contain four words, return an error message
     if (len(answer_split) != 4):
-        return "\n=====\n\nERROR: Please enter four dishes seperated by one space.\n\nExample: burger salad fish burrito\n\n=====\n"
+        return "\n=====\n\nERROR: Please enter four dishes separated by one space.\n\nExample: burger salad fish burrito\n\n=====\n"
 
     # If the list doesn't contain four valid words, return an error message
     for item in answer_split:
         if item not in menu:
-            return "\n=====\n\nERROR: Please enter four valid dishes from the menu seperated by one space.\n\nExample: burger salad fish burrito\n\n=====\n"
+            return "\n=====\n\nERROR: Please enter four valid dishes from the menu separated by one space.\n\nExample: burger salad fish burrito\n\n=====\n"
 
     # Tally the number of correctly placed dishes. Even if a dish belongs at the table but is not placed correctly, it will not show up in the tally
     answer_count = 0
@@ -188,7 +188,7 @@ def game_over(answer_count):
 player_name = input("\n_shifted\n\n.\n\n.\n\n.\n\nWelcome! What is your name? ")
 player_one = Player(player_name)
 
-print("\nHello, " + player_one.name + "!\n\nYou work at Chuck's, an esteemed local restaurant. It's a busy Friday night, and your head waiter suddenly had to leave work while waiting a table of four guests. Your friend has asked you to cover their shift.\n\nYour task is to determine the correct placement of the guests' dishes.")
+print("\nHello, " + player_one.name + "!\n\nYou work at Chuck's, an esteemed local restaurant. It's a busy Friday night, and your head waiter suddenly had to leave work while waiting a table of four guests. Your friend has asked you to cover their shift.\n\nYour task is to determine the correct placement of the guests' dishes. You will have eight tries.")
 
 print_info()
 
