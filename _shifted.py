@@ -25,13 +25,13 @@ def select_item(my_list):
     return item
 
 # Create four guests
-guest_one = Guest(select_item(names), select_item(dishes), 1)
+guestOne = Guest(select_item(names), select_item(dishes), 1)
 guest_two = Guest(select_item(names), select_item(dishes), 2)
-guest_three = Guest(select_item(names), select_item(dishes), 3)
+guestthree = Guest(select_item(names), select_item(dishes), 3)
 guest_four = Guest(select_item(names), select_item(dishes), 4)
 
 # Create list with four guests
-table = [guest_one, guest_two, guest_three, guest_four]
+table = [guestOne, guest_two, guestthree, guest_four]
 
 # Create separate alphabetized list of four guests
 def get_name(guest):
@@ -39,7 +39,7 @@ def get_name(guest):
 alpha_table = sorted(table, key=get_name)
 
 # Create menu with six dishes, including four that guests have chosen. Then alphabetize menu
-menu = [guest_one.dish, guest_two.dish, guest_three.dish, guest_four.dish, select_item(dishes), select_item(dishes)]
+menu = [guestOne.dish, guest_two.dish, guestthree.dish, guest_four.dish, select_item(dishes), select_item(dishes)]
 menu.sort()
 
 # Establish positional relationships with other guests
@@ -128,7 +128,7 @@ def check_plurality(word, condition):
     else:
         return word
 
-# Check answer after each submisison. If it is correct, end the game and give the score. If not, reduce the number of turns and tell the player how many dishes, if any, were placed in the correct spot
+# Check answer after each submission. If it is correct, end the game and give the score. If not, reduce the number of turns and tell the player how many dishes, if any, were placed in the correct spot
 def check_answer(answer):
     
     # Clean answer if it contains commas
@@ -188,11 +188,11 @@ def game_over(answer_count):
 player_name = input("\n_shifted\n\n.\n\n.\n\n.\n\nWelcome! What is your name? ")
 player_one = Player(player_name)
 
-print("\nHello, " + player_one.name + "!\n\nYou work at Chuck's, an esteemed local restaurant. It's a busy Friday night, and your head waiter suddenly had to leave work while waiting a table of four guests. Your friend has asked you to cover their shift.\n\nYour task is to determine the correct placement of the guests' dishes. You will have eight tries.")
+print("\nHello, " + player_one.name + "!\n\nYou work at Chuck's, an esteemed local restaurant. It's a busy Friday night, and your head waiter suddenly had to leave work while waiting a table of four guests. Your friend has asked you to cover their shift.\n\nYour task is to determine the correct placement of the guests' dishes based on clues, as well as trial and error. You will have eight tries.")
 
 print_info()
 
-print("\nClues:\n- The guests are seated at a round table.\n- You can assume each person ordered one unique item from the menu.\n- " + guest_one.name + " is sitting at seat 1.")
+print("\nClues:\n- The guests are seated at a round table.\n- You can assume each person ordered one unique item from the menu.\n- " + guestOne.name + " is sitting at seat 1.")
 print_clues()
 print("\n")
 
