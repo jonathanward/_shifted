@@ -25,13 +25,13 @@ def select_item(my_list):
     return item
 
 # Create four guests
-guestOne = Guest(select_item(names), select_item(dishes), 1)
+guest_one = Guest(select_item(names), select_item(dishes), 1)
 guest_two = Guest(select_item(names), select_item(dishes), 2)
-guestthree = Guest(select_item(names), select_item(dishes), 3)
+guest_three = Guest(select_item(names), select_item(dishes), 3)
 guest_four = Guest(select_item(names), select_item(dishes), 4)
 
 # Create list with four guests
-table = [guestOne, guest_two, guestthree, guest_four]
+table = [guest_one, guest_two, guest_three, guest_four]
 
 # Create separate alphabetized list of four guests
 def get_name(guest):
@@ -39,7 +39,7 @@ def get_name(guest):
 alpha_table = sorted(table, key=get_name)
 
 # Create menu with six dishes, including four that guests have chosen. Then alphabetize menu
-menu = [guestOne.dish, guest_two.dish, guestthree.dish, guest_four.dish, select_item(dishes), select_item(dishes)]
+menu = [guest_one.dish, guest_two.dish, guest_three.dish, guest_four.dish, select_item(dishes), select_item(dishes)]
 menu.sort()
 
 # Establish positional relationships with other guests
@@ -192,7 +192,7 @@ print("\nHello, " + player_one.name + "!\n\nYou work at Chuck's, an esteemed loc
 
 print_info()
 
-print("\nClues:\n- The guests are seated at a round table.\n- You can assume each person ordered one unique item from the menu.\n- " + guestOne.name + " is sitting at seat 1.")
+print("\nClues:\n- The guests are seated at a round table.\n- You can assume each person ordered one unique item from the menu.\n- " + guest_one.name + " is sitting at seat 1.")
 print_clues()
 print("\n")
 
