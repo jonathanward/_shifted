@@ -108,9 +108,17 @@ def create_clue_c():
     return clue
 
 def create_clue_d():
-    undesirable_food_one = select_item(clue_d_person.does_not_like)
-    undesirable_food_two = select_item(clue_d_person.does_not_like)
-    clue = "One person next to " + clue_d_person.name + " does not like " + check_food_plurality(undesirable_food_one) + " or " + check_food_plurality(undesirable_food_two) + "."
+    if (random.choice([0, 1]) == 0):
+        if (random.choice([0, 1]) == 0):
+            clue = clue_d_person.name + " is sitting to " + clue_d_person.right_neighbor.name + "'s left."
+        else:
+            clue = clue_d_person.name + " is sitting to " + clue_d_person.left_neighbor.name + "'s right."
+    else:
+        person = select_item([clue_a_person, clue_c_person, clue_d_person])
+        if (person.dish == "soup" or person.dish == "fish" or person.dish == "pizza" or person.dish == "pasta"):
+            clue = "One person ordered " + person.dish + "."
+        else:
+            clue = "One person ordered a " + person.dish + "."
     return clue
 
 # Shuffle clues so they don't always appear in the same order
