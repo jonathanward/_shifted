@@ -18,7 +18,7 @@ class Guest:
     def __repr__(self):
         return self.dish + " (" + self.name + ", place " + str(self.place) + ")"
 
-# Select random item from a list, remove it from the list and return it
+# Select random item from a list, remove it from the list and return item
 def select_item(my_list):
     item = random.choice(my_list)
     my_list.remove(item)
@@ -129,7 +129,7 @@ def print_clues():
     for clue in official_clues:
         print("- " + clue)
 
-# Check whether a word should be plural based on if a condition is true. If it is, add an s to the word. If not, return the word
+# Check whether a word should be plural based on if a condition is true. If it is, add an 's' to the word. If not, return the word
 def check_plurality(word, condition):
     if (condition):
         return word + "s"
@@ -169,7 +169,7 @@ def check_answer(answer):
         player_one.turns_left -= 1
         player_one.score = player_one.turns_left * 100 + 100
         return "\nYou win! You solved the problem in " + str(8 - player_one.turns_left) + " " + check_plurality("turn", ((8 - player_one.turns_left) != 1)) + ". Score: " + str(player_one.score) + "\n\n"
-    # If the player does not guess the correct order, show them how many dishes were place in the correct score. If they're out of turns, call the game_over function
+    # If the player does not guess the correct order, show them how many dishes were placed in the correct order. If they're out of turns, call the game_over function
     else:
         player_one.turns_left -= 1
         if (player_one.turns_left == 0):
@@ -192,7 +192,7 @@ def game_over(answer_count):
 
 # ======= START GAME =======
 
-# Show welcome messsage, collect player name
+# Show welcome message, collect player name
 player_name = input("\n_shifted\n\n.\n\n.\n\n.\n\nWelcome! What is your name? ")
 player_one = Player(player_name)
 
