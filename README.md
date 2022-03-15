@@ -29,7 +29,7 @@ The clues given at the beginning of each game tell the user information about th
 - One person ordered a burger.
 - Pasha does not like burritos or pasta.
 
-Guessing
+### Guessing
 
 The player will type the order of dishes starting in place 1. If they guess correctly, they win the game! If the guess is not correct, they will be told how many dishes, if any, are in the correct place.
 
